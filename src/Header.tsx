@@ -12,7 +12,7 @@ export default function Header() {
           work together, please reach out to me via email: 
            <a className="font-bold" href="mailto:sam@quackcore.com"> sam@quackcore.com</a>.
         </p>
-        <ul>
+        <ul className="pt-8">
           <li>Album 1</li>
           <li>Album 2</li>
           <li>Album 3</li>
