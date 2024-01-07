@@ -8,10 +8,10 @@ export default function Header() {
     
       <div className="font-lato text-[#6b747a]">
         <p dangerouslySetInnerHTML={{__html: config.description}} />
-        <ul className="pt-8">
+        <ul className="pt-8 text-lg underline">
           {config.albums.map(album => {
-            if (typeof album === "string") return <li><Link to={"/"+album}>{album}</Link></li>
-            else return <li><Link to={"/"+album[1]}>{album[0]}</Link></li>
+            if (typeof album === "string") return <li><Link to={"/"+album}>{" > "+album}</Link></li>
+            else return <li><Link to={"/"+album[1]}>{" > "+album[0]}</Link></li>
           })}
         </ul>
       </div>
