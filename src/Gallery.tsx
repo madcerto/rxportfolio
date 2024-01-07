@@ -47,7 +47,7 @@ export default function Gallery() {
       {albumItems.map(item => 
         <img
           className="w-full lg:p-3 p-1 hover:cursor-pointer"
-          onClick={()=>setPopupSrc(originals[item])}
+          onClick={()=>setPopupSrc(originals.get(item))}
           src={previews420p.get(item)}
         />
       )}
