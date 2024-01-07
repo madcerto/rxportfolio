@@ -3,7 +3,7 @@ import {useState} from 'react'
 import ImagePopup from './ImagePopup.tsx';
 
 export default function Gallery() {
-  const previews = Object.values(import.meta.glob('/src/assets/Film Scans/Lightroom-ed/*.{png,jpg,jpeg,PNG,JPEG,JPG}', {
+  const previews: Array<string> = Object.values(import.meta.glob('/src/assets/Film Scans/Lightroom-ed/*.{png,jpg,jpeg,PNG,JPEG,JPG}', {
     eager: true,
     import: "default",
     query: {
@@ -11,7 +11,7 @@ export default function Gallery() {
       w: 420,
     }
   }))
-  const originals = Object.values(import.meta.glob('/src/assets/Film Scans/Lightroom-ed/*.{png,jpg,jpeg,PNG,JPEG,JPG}', {
+  const originals: Array<string> = Object.values(import.meta.glob('/src/assets/Film Scans/Lightroom-ed/*.{png,jpg,jpeg,PNG,JPEG,JPG}', {
     eager: true,
     import: "default",
     query: {
