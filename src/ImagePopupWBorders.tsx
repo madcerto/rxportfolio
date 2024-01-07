@@ -1,3 +1,5 @@
+import x from './assets/x.svg'
+
 export default function ImagePopup(props: {src?: string}) {
   return props.src ? (
     <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -6,7 +8,7 @@ export default function ImagePopup(props: {src?: string}) {
         <div className="flex h-full items-end justify-center p-4 text-center sm:items-center sm:p-6">
           <div className="h-full relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8">
             <div className="fixed w-8 m-2 top-0 right-0 text-gray-500">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="oc se"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+              <img src={x} />
             </div>
             <div className="h-full bg-white px-4 pb-4 pt-5 sm:p-5 sm:pb-4 sm:pt-10">
               <div className="h-full sm:flex sm:items-start">
