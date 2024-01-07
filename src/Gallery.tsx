@@ -16,17 +16,17 @@ export default function Gallery() {
       }
     })
   ));
-  const previews720p = new Map<string, string>(Object.entries(
-    import.meta.glob('/albums/*/*.{png,jpg,jpeg,PNG,JPEG}', {
-      eager: true,
-      import: "default",
-      query: {
-        format: "webp",
-        w: 720,
-        lossless: true
-      }
-    })
-  ));
+  // const previews720p = new Map<string, string>(Object.entries(
+  //   import.meta.glob('/albums/*/*.{png,jpg,jpeg,PNG,JPEG}', {
+  //     eager: true,
+  //     import: "default",
+  //     query: {
+  //       format: "webp",
+  //       w: 720,
+  //       lossless: true
+  //     }
+  //   })
+  // ));
   const originals = new Map<string, string>(Object.entries(
     import.meta.glob('/albums/*/*.{png,jpg,jpeg,PNG,JPEG}', {
       eager: true,
