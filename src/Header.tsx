@@ -1,21 +1,15 @@
+import {Link} from 'react-router-dom'
+import {TITLE, DESCRIPTION, ALBUMS} from '../constants.ts';
+
 export default function Header() {
   return (
-    /* TODO: build sm version*/
     <div className="lg:w-80 w-64 p-8 pt-16">
-      <p className="font-noto font-bold text-2xl pb-8">Sam Gregg Photography</p>
+      <p className="font-noto font-bold text-2xl pb-8">{TITLE}</p>
     
       <div className="font-lato text-[#6b747a]">
-        <p>
-          <strong>Sam Gregg</strong> is a current Film Student, as well as a
-          freelance photographer, video editor, and photojournalist. 
-          If you have any questions about my work, or would like to 
-          work together, please reach out to me via email: 
-           <a className="font-bold" href="mailto:sam@quackcore.com"> sam@quackcore.com</a>.
-        </p>
+        <p dangerouslySetInnerHTML={{__html: DESCRIPTION}} />
         <ul className="pt-8">
-          <li>Album 1</li>
-          <li>Album 2</li>
-          <li>Album 3</li>
+          {ALBUMS.map(album => <li><Link to={"/"+album}>{album}</Link></li>)}
         </ul>
       </div>
     </div>
