@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import {TITLE, DESCRIPTION, ALBUMS} from '../constants.ts';
 
 export default function Header() {
@@ -8,7 +9,7 @@ export default function Header() {
       <div className="font-lato text-[#6b747a]">
         <p dangerouslySetInnerHTML={{__html: DESCRIPTION}} />
         <ul className="pt-8">
-          {ALBUMS.map(album => <li><a href={"/"+album}>{album}</a></li>)}
+          {ALBUMS.map(album => <li><Link to={"/"+album}>{album}</Link></li>)}
         </ul>
       </div>
     </div>
