@@ -8,7 +8,7 @@ export default function Header() {
       <div className="font-lato text-[#6b747a]">
         <p dangerouslySetInnerHTML={{__html: DESCRIPTION}} />
         <ul className="pt-8">
-          {ALBUMS.map(album => <li>{album}</li>)}
+          {ALBUMS.map(album => <li><a href={"/"+album}>{album}</a></li>)}
         </ul>
       </div>
     </div>

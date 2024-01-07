@@ -10,5 +10,6 @@ work together, please reach out to me via email:
 
 export const ALBUMS = [
   '1355',
-  'Lightroom-ed'
+  'Lightroom-ed',
+  '0864'
 ]

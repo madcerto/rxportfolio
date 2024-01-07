@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # Albums
-src/assets/Film Scans
+albums/
