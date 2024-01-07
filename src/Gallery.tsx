@@ -40,7 +40,7 @@ export default function Gallery() {
   const albumItems = [...originals.keys()]
     .filter(path => path.startsWith("/albums/"+album))
 
-  const [popupSrc, setPopupSrc] = useState<string?|null>(null);
+  const [popupSrc, setPopupSrc] = useState<string|undefined|null>(null);
 
   return <div className="flex-1 h-screen overflow-auto">
     <div className="pt-32 lg:columns-3 columns-2 gap-0">
