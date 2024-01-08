@@ -1,11 +1,10 @@
 {
-  "title": "Sam Gregg Photography",
+  "title": "John Doe Photography",
 
-  "description": "<strong>Sam Gregg</strong> is a current Film Student, as well as a freelance photographer, video editor, and photojournalist. If you have any questions about my work, or would like to work together, please reach out to me via email: <a class=\"font-bold\" href=\"mailto:sam@quackcore.com\"> sam@quackcore.com</a>.",
+  "description": "<strong>John Doe</strong> has a passion for capturing the world on camera. You can reach him via email: <a class=\"font-bold\" href=\"mailto:john.doe@example.com\"> john.doe@example.com</a>.",
 
   "albums": [
-    ["Main","1355"],
-    "Lightroom-ed",
-    "0864"
+    ["My Best", "folder1"],
+    ["Cancun", "folder2"]
   ]
 }
