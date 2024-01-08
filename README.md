@@ -66,3 +66,5 @@ having a rotated image messes with the image processing library.
 use a proper image editor to rotate images, and fix any current images
 [using IrfanView](https://exiftool.org/forum/index.php?PHPSESSID=02928edf530afe784db76d07de54677a&msg=59324)
 or a different software
+- special characters in file names may also mess with the image
+processing library. avoid if possible
