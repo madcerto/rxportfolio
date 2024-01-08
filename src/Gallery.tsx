@@ -6,27 +6,27 @@ import ImagePopup from './ImagePopup.tsx';
 export default function Gallery() {
   const {album} = useParams();
 
-  const previews420p = new Map<string, string>(Object.entries(
-    import.meta.glob('/albums/*/*.{png,jpg,jpeg,PNG,JPEG}', {
-      eager: true,
-      import: "default",
-      query: {
-        format: "webp",
-        w: 420,
-      }
-    })
-  ));
-  // const previews720p = new Map<string, string>(Object.entries(
+  // const previews420p = new Map<string, string>(Object.entries(
   //   import.meta.glob('/albums/*/*.{png,jpg,jpeg,PNG,JPEG}', {
   //     eager: true,
   //     import: "default",
   //     query: {
   //       format: "webp",
-  //       w: 720,
-  //       lossless: true
+  //       w: 420,
   //     }
   //   })
   // ));
+  const previews720p = new Map<string, string>(Object.entries(
+    import.meta.glob('/albums/*/*.{png,jpg,jpeg,PNG,JPEG}', {
+      eager: true,
+      import: "default",
+      query: {
+        format: "webp",
+        w: 720,
+        lossless: true
+      }
+    })
+  ));
   const originals = new Map<string, string>(Object.entries(
     import.meta.glob('/albums/*/*.{png,jpg,jpeg,PNG,JPEG}', {
       eager: true,
@@ -48,7 +48,7 @@ export default function Gallery() {
         <img
           className="w-full lg:p-3 p-1 hover:cursor-pointer"
           onClick={()=>setPopupSrc(originals.get(item))}
-          src={previews420p.get(item)}
+          src={previews720p.get(item)}
         />
       )}
       <ImagePopup src={popupSrc} onClose={()=>setPopupSrc(null)}/>
