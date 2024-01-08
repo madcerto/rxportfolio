@@ -16,11 +16,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/rxportfolio/:album" element={<App />} />
-        <Route path="*" element={<Navigate to={
+        <Route path={["/", "/rxportfolio"]} element={<Navigate to={
           "/rxportfolio/" + ((typeof config.albums[0] === "string")
             ? config.albums[0] : config.albums[0][1])
         } />} />
+        <Route path="/rxportfolio/:album" element={<App />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
