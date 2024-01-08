@@ -1,35 +1,68 @@
-# React + TypeScript + Vite
+# Reactive Portfolio
+This is a website template for a simple photo portfolio, built in ReactJS
+using Vite and vite-imagetools. It can be hosted on GitHub Pages, or on
+any static webserver. A little bit of technical knowledge is helpful,
+but setup is quite simple.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Dependencies (for self-hosting)
+- A OS compatible with the [sharp](https://sharp.pixelplumbing.com/install#prebuilt-binaries)
+library
+- Node.js v20.x
+- NPM v10.2.5+
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Building
 ```
+npm install
+npm run build
+```
+Output is in the `dist` folder
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Configuration
+The `albums` directory at the root of the project is scanned for
+subdirectories that contain the displayed albums.
+```
+- /
+  - albums
+    - albumfolder1
+      - img1.jgp
+      - img2.jpg
+    - albumfolder2
+      - img1.jgp
+      - img2.jpg
+```
+Any further subdirectories will not be scanned, so make sure all images
+are directly inside their album. You can order the images by naming them in
+ascending order.
+
+Config options are in the `config.json` file:
+
+### title
+Title that appears at the top on the left
+### description
+Description that appears on the left. Optional.
+### albums
+List of albums to display. You can either give the name of the folder
+that contains the album:
+```
+"albums": [
+  "folder1",
+  "folder2"
+]
+```
+or an array with the first item being the display name of the album,
+and the second being the folder name:
+```
+"albums": [
+  ["Album 1", "folder1"],
+  ["Album 2", "folder2"]
+]
+```
+or a mix of both.
 
 ## Known Issues
-- capitalized file extensions can mess with it
+- capitalized file extensions can mess with it (e.g. img.JPG)
 - rotating an image using EXIF flags rather than actually 
-having a rotated image messes with the image processing library
+having a rotated image messes with the image processing library.
+use a proper image editor to rotate images, and fix any current images
+[using IrfanView](https://exiftool.org/forum/index.php?PHPSESSID=02928edf530afe784db76d07de54677a&msg=59324)
+or a different software
