@@ -57,7 +57,10 @@ and the second being the folder name:
   ["Album 2", "folder2"]
 ]
 ```
-or a mix of both.
+or a mix of both. The only folder name not allowed is `rxportfolio`.
+If you must, you can use an alias to name an album that. The first
+album in the list is the default, i.e. the root of the site redirects
+to it.
 
 ## Known Issues
 - capitalized file extensions can mess with it (e.g. img.JPG)
