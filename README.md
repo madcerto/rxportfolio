@@ -17,6 +17,20 @@ npm run build
 ```
 Output is in the `dist` folder
 
+## Deploying
+### Self-hosted
+Serve the output files on any static web server. Make sure all
+routes serve the index.html file.
+
+### GitHub Pages
+Fork the repo, using the same `rxportfolio` name. Currently this
+has to be hardcoded; if you need to change the name, you can just go into
+the code and replace all references to it. Create a new branch called
+`deploy` from the main branch. This will trigger the build process to run.
+It may take a few mins, but once a `gh-pages` branch is generated, you
+can [set up GitHub pages](https://docs.github.com/en/pages/quickstart#creating-your-website)
+to serve that branch.
+
 ## Configuration
 The `albums` directory at the root of the project is scanned for
 subdirectories that contain the displayed albums.
