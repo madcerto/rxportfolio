@@ -2,14 +2,14 @@ import {useRef, useState, useEffect} from 'react'
 import {useContainerDimensions} from './util/useContainerDimensions.tsx'
 
 export default function ProgressiveImg(props: {
-  preview?: string,
+  preview: string,
   original?: string,
   size: {width?: number, height?: number},
   setPopupSrc: any
 }) {
-  const compRef = useRef()
-  const { width, height } = useContainerDimensions(compRef)
-  const [imgSrc, setImgSrc] = useState(null)
+  const compRef = useRef<HTMLImageElement>()
+  const { width } = useContainerDimensions(compRef)
+  const [imgSrc, setImgSrc] = useState<string|null>(null)
 
   useEffect(() => {
     setImgSrc(null)
