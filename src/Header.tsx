@@ -14,8 +14,8 @@ export default function Header() {
             else return <li><Link to={"/rxportfolio/"+album[1]}>{" > "+album[0]}</Link></li>
           })}
           {config.returnLink && (typeof config.returnLink === "string"
-            ? <li><a href={config.returnLink}>> Return</a></li>
-            : <li><a href={config.returnLink[1]}>> {config.returnLink[0]}</a></li>)}
+            ? <li><a href={config.returnLink}>{"> Return"}</a></li>
+            : <li><a href={config.returnLink[1]}>{"> "+config.returnLink[0]}</a></li>)}
         </ul>
       </div>
     </div>
