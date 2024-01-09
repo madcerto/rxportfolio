@@ -41,7 +41,7 @@ export default function Gallery() {
   const [popupSrc, setPopupSrc] = useState<string|undefined|null>(null);
 
   return <div className="flex-1 h-screen overflow-auto">
-    <div className="pt-32 lg:columns-3 columns-2 gap-0">
+    <div className="sm:pt-32 xl:columns-3 sm:columns-2 gap-0">
       {albumItems.map(item =>
         <ProgressiveImg 
           preview={previews720p.get(item)}

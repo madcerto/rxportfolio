@@ -3,7 +3,7 @@ import config from '../config.json'
 
 export default function Header() {
   return (
-    <div className="lg:w-80 w-64 p-8 pt-16">
+    <div className="lg:w-80 sm:w-64 p-8 sm:pt-16">
       <p className="font-noto font-bold text-2xl pb-8">{config.title}</p>
     
       <div className="font-lato text-[#6b747a]">
