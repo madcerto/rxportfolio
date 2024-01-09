@@ -77,6 +77,21 @@ or a mix of both. The only folder name not allowed is `rxportfolio`.
 If you must, you can use an alias to name an album that. The first
 album in the list is the default, i.e. the root of the site redirects
 to it.
+### returnLink
+Optional, if you want to put a link to your home page, or any other
+page, at the end of the albums list.
+
+Either link to the page itself:
+```
+"returnLink": "https://example.com"
+```
+which will show an item called "Return" on the page
+
+or an array with the first element as the name of the item, and
+the second as the link to the page:
+```
+"returnLink": ["Home", "https://example.com"]
+```
 
 ## Known Issues
 - capitalized file extensions can mess with it (e.g. img.JPG)
@@ -85,5 +100,5 @@ having a rotated image messes with the image processing library.
 use a proper image editor to rotate images, and fix any current images
 [using IrfanView](https://exiftool.org/forum/index.php?PHPSESSID=02928edf530afe784db76d07de54677a&msg=59324)
 or a different software
-- special characters in file names may also mess with the image
+- special characters and spaces in file names may also mess with the image
 processing library. avoid if possible
