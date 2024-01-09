@@ -4,7 +4,7 @@ import Gallery from './Gallery.tsx';
 function App() {
 
   return (
-    <div className="flex">
+    <div className="flex sm:flex-row flex-col">
       <Header />
       <Gallery />
     </div>
