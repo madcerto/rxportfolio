@@ -7,7 +7,7 @@ export default function ProgressiveImg(props: {
   size?: {width: number, height: number},
   setPopupSrc: any
 }) {
-  const compRef = useRef<HTMLImageElement|HTMLDivElement>(null)
+  const compRef = useRef<HTMLImageElement>(null)
   const { width } = useContainerDimensions(compRef)
   const [imgSrc, setImgSrc] = useState<string|null|undefined>(null)
 
