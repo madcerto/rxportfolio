@@ -22,7 +22,7 @@ export default function ProgressiveImg(props: {
 
   return imgSrc ? <img
       ref={compRef}
-      className="w-full lg:p-3 sm:p-1 p-6 py-3 bg-gray-400 bg-clip-content hover:cursor-pointer"
+      className="w-full sm:p-3 p-6 py-3 bg-gray-400 bg-clip-content hover:cursor-pointer"
       style={{
         "height": props.size.height
           * (width / props.size.width)
