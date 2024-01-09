@@ -6,7 +6,7 @@ import ProgressiveImg from './ProgressiveImg.tsx'
 export default function Gallery() {
   const {album} = useParams();
 
-  const imageSizes = new Map<string, Object>(Object.entries(
+  const imageSizes = new Map<string, {width: number, height: number}>(Object.entries(
     import.meta.glob('/albums/*/*.{png,jpg,jpeg,PNG,JPEG}', {
       eager: true,
       query: {
