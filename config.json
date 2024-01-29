@@ -1,7 +1,7 @@
 {
   "title": "John Doe Photography",
 
-  "description": "<strong>John Doe</strong> has a passion for capturing the world on camera. You can reach him via email: <a class=\"font-bold\" href=\"mailto:john.doe@example.com\"> john.doe@example.com</a>.",
+  "description": "<strong>John Doe</strong> has a passion for capturing the world on camera. You can reach him via email: <a class=\"font-bold\" href=\"mailto:john.doe@example.com\"> john.doe@example.com</a>. See the <a href=\"https://github.com/madcerto/rxportfolio/\">code</a>",
 
   "albums": [
     ["My Best", "folder1"],
